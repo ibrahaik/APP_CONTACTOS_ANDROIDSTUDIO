@@ -29,6 +29,10 @@ public interface ContactDao {
 
     @Query("SELECT * FROM contacts WHERE id = :contactId")
     LiveData<Contact> getContactById(int contactId);
+
+    @Query("SELECT * FROM contacts WHERE nombre LIKE :query")
+    LiveData<List<Contact>> getFilteredContacts(String query);
+
 }
 
 

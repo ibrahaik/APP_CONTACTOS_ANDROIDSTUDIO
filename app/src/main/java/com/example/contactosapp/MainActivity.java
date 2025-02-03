@@ -10,6 +10,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.widget.SwitchCompat;
+
 
 public class MainActivity extends AppCompatActivity {
     private NavController navController;

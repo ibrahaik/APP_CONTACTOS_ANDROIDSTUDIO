@@ -1,16 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/homeText"
-        android:layout_width="wrap_content"
+    <!-- Barra de búsqueda -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="20sp" />
+        android:queryHint="Buscar contacto"
+        android:iconifiedByDefault="false" />
 
+    <!-- Mensaje de bienvenida que se muestra cuando no hay búsqueda -->
+    <TextView
+        android:id="@+id/tvWelcomeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido! Busca tus contactos."
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:visibility="gone" /> <!-- Inicialmente invisible -->
 
+    <!-- RecyclerView para mostrar los contactos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewContacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:scrollbars="vertical" />
 </LinearLayout>
