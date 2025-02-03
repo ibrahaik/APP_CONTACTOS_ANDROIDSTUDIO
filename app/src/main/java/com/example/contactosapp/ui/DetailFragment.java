@@ -27,7 +27,7 @@ import com.example.contactosapp.viewmodel.ContactsViewModel;
 public class DetailFragment extends Fragment {
     private TextView textViewName, textViewNumber;
     private ImageView profileImage;
-    private ImageButton btnCall, btnMessage; // Botones para llamar y enviar mensaje
+    private ImageButton btnCall, btnMessage;
     private ContactsViewModel contactsViewModel;
     private Contact currentContact;
 
@@ -40,7 +40,6 @@ public class DetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Configurar la Toolbar
         ((AppCompatActivity) requireActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setHasOptionsMenu(true);
 
@@ -65,14 +64,11 @@ public class DetailFragment extends Fragment {
             }
         });
 
-        // Llamar al contacto
         btnCall.setOnClickListener(v -> makeCall());
 
-        // Enviar un mensaje al contacto
         btnMessage.setOnClickListener(v -> sendMessage());
     }
 
-    // Método para llamar
     private void makeCall() {
         if (currentContact != null && currentContact.getNumero() != null) {
             Uri callUri = Uri.parse("tel:" + currentContact.getNumero());
@@ -81,7 +77,6 @@ public class DetailFragment extends Fragment {
         }
     }
 
-    // Método para enviar un mensaje
     private void sendMessage() {
         if (currentContact != null && currentContact.getNumero() != null) {
             Uri smsUri = Uri.parse("smsto:" + currentContact.getNumero());
@@ -91,7 +86,6 @@ public class DetailFragment extends Fragment {
         }
     }
 
-    // Manejar el botón de retroceso en la Toolbar
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

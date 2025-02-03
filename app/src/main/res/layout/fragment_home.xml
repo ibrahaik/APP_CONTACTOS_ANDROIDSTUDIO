@@ -6,15 +6,15 @@
 
 
 
-    <!-- Mensaje de bienvenida que se muestra cuando no hay búsqueda -->
     <TextView
         android:id="@+id/tvWelcomeMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¡Bienvenido! Busca tus contactos."
+        android:text="¡Bienvenido! Empieza agregando un contacto."
         android:textSize="18sp"
         android:textAlignment="center"
-        android:visibility="gone" /> <!-- Inicialmente invisible -->
+        android:layout_marginTop="200dp"
+         />
 
 
 </LinearLayout>

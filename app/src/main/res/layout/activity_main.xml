@@ -9,7 +9,6 @@
     tools:context=".MainActivity"
     android:background="@color/white">
 
-    <!-- AppBar con MaterialToolbar -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +20,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/blue_dark"
             android:elevation="8dp"
-            app:title="Mis Contactos"
+            app:title="BOYTSAPP"
             app:titleCentered="true"
             app:titleTextAppearance="@style/ToolbarTitle"
             app:titleTextColor="@color/white"
@@ -32,7 +31,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Contenedor del Fragment -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"
@@ -44,7 +42,6 @@
         android:fitsSystemWindows="true"/>
 
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

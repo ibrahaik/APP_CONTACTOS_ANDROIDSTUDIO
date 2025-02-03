@@ -22,24 +22,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Configurar Toolbar como ActionBar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Obtener BottomNavigationView
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        // Obtener NavHostFragment de forma segura
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
 
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();
 
-            // Configurar BottomNavigationView con NavController
             NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
-            // Agregar listener para depuración
             bottomNavigationView.setOnItemSelectedListener(item -> {
                 Log.d("BottomNav", "Selected item ID: " + item.getItemId());
                 boolean handled = NavigationUI.onNavDestinationSelected(item, navController);

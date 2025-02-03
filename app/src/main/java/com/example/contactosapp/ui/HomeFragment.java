@@ -45,11 +45,4 @@ public class HomeFragment extends Fragment {
 
     }
 
-
-    // Actualiza el mensaje de bienvenida
-    private void updateWelcomeMessage(List<Contact> contacts) {
-        if (contacts.isEmpty()) {
-            welcomeMessage.setVisibility(View.VISIBLE);  // Si no hay contactos, muestra el mensaje de bienvenida
-        }
-    }
 }

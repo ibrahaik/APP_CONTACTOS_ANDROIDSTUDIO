@@ -34,7 +34,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:orientation="horizontal">
-        <!-- Botón de llamada con LinearLayout dentro para incluir el icono -->
+
         <ImageButton
             android:id="@+id/btn_call"
             android:layout_width="35dp"
