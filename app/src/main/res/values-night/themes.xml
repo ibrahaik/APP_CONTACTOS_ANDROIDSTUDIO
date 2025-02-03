@@ -4,6 +4,15 @@
 
     </style>
 
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores personalizados para el modo oscuro -->
+        <item name="colorPrimary">@color/gray_dark</item> <!-- Color primario oscuro -->
+        <item name="colorPrimaryDark">@color/gray_dark</item> <!-- Color oscuro primario -->
+        <item name="android:windowBackground">@color/black</item> <!-- Fondo negro -->
+        <item name="android:textColorPrimary">@color/white</item> <!-- Texto blanco -->
+    </style>
+
+
     <style name="ThemeOverlay.Material3.Popup" parent="ThemeOverlay.Material3">
         <item name="android:background">?attr/colorAccent</item>
         <item name="android:textColorPrimary">?attr/colorOnSurface</item>
@@ -14,4 +23,7 @@
         <item name="android:textSize">20sp</item> <!-- Tamaño adecuado -->
         <item name="android:fontFamily">@font/roboto_medium</item> <!-- Fuente moderna como Roboto -->
     </style>
+
+
+
 </resources>

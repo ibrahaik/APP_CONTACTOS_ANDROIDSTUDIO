@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ import com.example.contactosapp.viewmodel.ContactsViewModel;
 public class DetailFragment extends Fragment {
     private TextView textViewName, textViewNumber;
     private ImageView profileImage;
-    private Button btnCall, btnMessage; // Botones para llamar y enviar mensaje
+    private ImageButton btnCall, btnMessage; // Botones para llamar y enviar mensaje
     private ContactsViewModel contactsViewModel;
     private Contact currentContact;
 

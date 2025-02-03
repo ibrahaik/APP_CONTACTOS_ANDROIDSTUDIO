@@ -7,6 +7,13 @@
 
     <style name="Theme.ContactosApp" parent="Base.Theme.ContactosApp" />
 
-
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores personalizados para el modo claro -->
+        <item name="colorPrimary">@color/blue</item> <!-- Color primario claro -->
+        <item name="colorPrimaryDark">@color/blue_dark</item> <!-- Color oscuro primario -->
+        <item name="colorAccent">@color/blue_light</item> <!-- Color de acento -->
+        <item name="android:windowBackground">@color/white</item> <!-- Fondo blanco -->
+        <item name="android:textColorPrimary">@color/black</item> <!-- Texto negro -->
+    </style>
 
 </resources>

@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Colors -->
     <color name="gray">#B0B0B0</color>
     <color name="white">#FFFFFF</color>
     <color name="colorPrimary">#1E88E5</color>
     <color name="colorPrimaryVariant">#1565C0</color>
     <color name="colorSecondary">#42A5F5</color>
     <color name="colorAccent">#29B6F6</color>
-
-    <!-- Backgrounds -->
     <color name="colorBackground">#F5F5F5</color>
     <color name="colorSurface">#FFFFFF</color>
     <color name="bottom_nav_item_color">#757575</color> <!-- Color gris oscuro -->
-
-    <!-- Text Colors -->
     <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorOnSecondary">#FFFFFF</color>
     <color name="colorOnBackground">#212121</color>
     <color name="colorOnSurface">#424242</color>
-
-    <!-- Bottom Navigation Colors -->
     <color name="bottom_nav_selected">#1E88E5</color>
     <color name="bottom_nav_unselected">#9E9E9E</color>
-
-    <!-- Divider and Border Colors -->
     <color name="dividerColor">#BDBDBD</color>
     <color name="blue_dark">#1E3A8A</color> <!-- Un tono oscuro de azul -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Color oscuro primario -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- Fondo claro -->
+    <color name="textColor">#000000</color> <!-- Color texto claro -->
+    <color name="blue">#2196F3</color> <!-- Azul claro -->
+    <color name="blue_light">#64B5F6</color> <!-- Azul claro más suave -->
+    <color name="black">#000000</color> <!-- Negro -->
+    <color name="gray_dark">#757575</color> <!-- Gris oscuro -->
+
 </resources>
