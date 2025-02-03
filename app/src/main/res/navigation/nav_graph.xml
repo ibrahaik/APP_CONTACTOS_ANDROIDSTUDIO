@@ -30,7 +30,6 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
 
-        <!-- 🚀 NUEVA ACCIÓN para ir a AddContactFragment -->
         <action
             android:id="@+id/action_contacts_to_addContact"
             app:destination="@id/addContactFragment"

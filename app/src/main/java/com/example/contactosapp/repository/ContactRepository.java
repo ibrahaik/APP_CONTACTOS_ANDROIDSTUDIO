@@ -40,4 +40,9 @@ public class ContactRepository {
     public void delete(Contact contact) {
         executorService.execute(() -> contactDao.delete(contact));
     }
+
+    public LiveData<List<Contact>> getFilteredContacts(String query) {
+        return contactDao.getFilteredContacts(query);
+    }
+
 }

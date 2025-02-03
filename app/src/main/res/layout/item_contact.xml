@@ -35,5 +35,7 @@
             android:text="Número del Contacto"
             android:textSize="14sp"
             android:textColor="@android:color/darker_gray" />
+
+       
     </LinearLayout>
 </LinearLayout>

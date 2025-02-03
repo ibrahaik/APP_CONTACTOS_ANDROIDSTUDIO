@@ -25,4 +25,5 @@
 
     <!-- Divider and Border Colors -->
     <color name="dividerColor">#BDBDBD</color>
+    <color name="blue_dark">#1E3A8A</color> <!-- Un tono oscuro de azul -->
 </resources>

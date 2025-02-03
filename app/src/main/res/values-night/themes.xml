@@ -8,4 +8,10 @@
         <item name="android:background">?attr/colorAccent</item>
         <item name="android:textColorPrimary">?attr/colorOnSurface</item>
     </style>
+
+    <style name="ToolbarTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/white</item> <!-- Color blanco para el texto -->
+        <item name="android:textSize">20sp</item> <!-- Tamaño adecuado -->
+        <item name="android:fontFamily">@font/roboto_medium</item> <!-- Fuente moderna como Roboto -->
+    </style>
 </resources>

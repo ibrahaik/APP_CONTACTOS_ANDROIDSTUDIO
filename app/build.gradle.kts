@@ -54,4 +54,6 @@ dependencies {
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
     implementation(libs.room.ktx)
+    implementation(libs.glide)
+    annotationProcessor(libs.glide.compiler)
     }

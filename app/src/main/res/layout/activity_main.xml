@@ -19,13 +19,14 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorSurfaceContainer"
-            android:elevation="4dp"
-            app:title="Contactos"
+            android:background="@color/blue_dark"
+            android:elevation="8dp"
+            app:title="Mis Contactos"
             app:titleCentered="true"
-            app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-            app:titleTextColor="?attr/colorOnSurface"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            app:titleTextColor="@color/white"
             app:popupTheme="@style/ThemeOverlay.Material3.Popup"/>
+
 
 
 
