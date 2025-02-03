@@ -2,56 +2,51 @@ package com.example.contactosapp.ui;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.example.contactosapp.R;
 import com.example.contactosapp.model.Contact;
+import com.example.contactosapp.viewmodel.ContactsViewModel;
 
 public class AddContactFragment extends Fragment {
-    private EditText etContactName;
-    private EditText etContactNumber;
-    private Button btnSaveContact;
-    private ContactViewModel contactViewModel;
+    private ContactsViewModel contactsViewModel;
+
+    public AddContactFragment() {
+        super(R.layout.fragment_add_contact);
+    }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_add_contact, container, false);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        etContactName = view.findViewById(R.id.et_contact_name);
-        etContactNumber = view.findViewById(R.id.et_contact_number);
-        btnSaveContact = view.findViewById(R.id.btn_save_contact);
+        contactsViewModel = new ViewModelProvider(this).get(ContactsViewModel.class);
+        EditText etName = view.findViewById(R.id.et_contact_name);
+        EditText etNumber = view.findViewById(R.id.et_contact_number);
+        Button btnSave = view.findViewById(R.id.btn_save_contact);
 
-        contactViewModel = new ViewModelProvider(requireActivity()).get(ContactViewModel.class);
-
-        btnSaveContact.setOnClickListener(v -> {
-            String name = etContactName.getText().toString().trim();
-            String number = etContactNumber.getText().toString().trim();
-
-            Log.d("ContactApp", "Nuevo contacto: " + name + " Número: " + number );
+        btnSave.setOnClickListener(v -> {
+            String name = etName.getText().toString().trim();
+            String number = etNumber.getText().toString().trim();
 
             if (!name.isEmpty() && !number.isEmpty()) {
-                Contact newContact = new Contact(name, number);
-                contactViewModel.insert(newContact);
+                String defaultImageUri = null; // Puedes cambiar esto por una URL o recurso predeterminado
 
-                // Volver a la pantalla principal
-                NavController navController = Navigation.findNavController(v);
-                navController.popBackStack();
-            } else {
-                Toast.makeText(requireContext(), "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+                Contact newContact = new Contact(name, number, defaultImageUri);
+                contactsViewModel.insertContact(newContact);
+
+                // Mensaje de depuración para verificar que se está guardando
+                Log.d("AddContactFragment", "Contacto guardado: " + name + ", " + number + ", " + defaultImageUri);
+
+                // Regresar a la lista de contactos después de guardar
+                Navigation.findNavController(view).navigateUp();
             }
         });
-
-        return view;
     }
 }

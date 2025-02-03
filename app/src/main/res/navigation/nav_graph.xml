@@ -8,42 +8,52 @@
         android:id="@+id/homeFragment"
         android:name="com.example.contactosapp.ui.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.contactosapp.ui.SettingsFragment"
+        android:label="Ajustes"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.contactosapp.ui.ContactsFragment"
+        android:label="Contactos"
+        tools:layout="@layout/fragment_contacts">
+
         <action
-            android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_contacts_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <!-- 🚀 NUEVA ACCIÓN para ir a AddContactFragment -->
+        <action
+            android:id="@+id/action_contacts_to_addContact"
+            app:destination="@id/addContactFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
+
 
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.contactosapp.ui.DetailFragment"
         android:label="Detail"
-        tools:layout="@layout/fragment_detail" />
-
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.contactosapp.ui.HomeFragment"
-        android:label="Inicio" />
-    <fragment
-        android:id="@+id/nav_contacts"
-        android:name="com.example.contactosapp.ui.ContactsFragment"
-        android:label="Contactos"
-        tools:layout="@layout/fragment_contacts"/>
-        <action
-            android:id="@+id/action_contacts_to_addContact"
-            app:destination="@+id/addContactFragment"/>
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="contactId"
+            app:argType="integer"/>
+    </fragment>
 
     <fragment
         android:id="@+id/addContactFragment"
         android:name="com.example.contactosapp.ui.AddContactFragment"
         android:label="Agregar Contacto"
-        tools:layout="@layout/fragment_add_contact" />
-
-    <fragment
-        android:id="@+id/nav_settings"
-        android:name="com.example.contactosapp.ui.SettingsFragment"
-        android:label="Ajustes" />
-
-
-
+        tools:layout="@layout/fragment_add_contact"/>
 </navigation>
