@@ -1,0 +1,22 @@
+Contactos es una aplicación Android desarrollada en Java que permite gestionar contactos de forma local. Cuenta con funcionalidades como agregar, editar, eliminar, buscar y ver detalles de contactos, así como opciones para llamar o enviar mensajes directamente desde la app. Incluye navegación entre fragmentos, una interfaz organizada mediante BottomNavigationView y un diseño moderno con soporte para temas personalizados y animaciones.
+
+Tecnologías utilizadas
+Lenguaje: Java
+
+Arquitectura: MVVM (Model-View-ViewModel)
+
+Base de datos local: Room (con LiveData)
+
+Navegación: Navigation Component
+
+Interfaz gráfica: Fragments, ViewBinding, RecyclerView, Material Components
+
+Imagen de contactos: Glide
+
+Persistencia y gestión de datos: ViewModel + Repository + DAO
+
+Compatibilidad mínima: Android API 24+
+
+Gradle con Kotlin DSL
+
+Testing: JUnit y Espresso
