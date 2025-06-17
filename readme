@@ -1,22 +1,117 @@
-Contactos es una aplicación Android desarrollada en Java que permite gestionar contactos de forma local. Cuenta con funcionalidades como agregar, editar, eliminar, buscar y ver detalles de contactos, así como opciones para llamar o enviar mensajes directamente desde la app. Incluye navegación entre fragmentos, una interfaz organizada mediante BottomNavigationView y un diseño moderno con soporte para temas personalizados y animaciones.
+📱 ContactosApp - Gestor de Contactos Android
+ContactosApp es una aplicación Android desarrollada en Java que permite gestionar contactos de forma local con una interfaz intuitiva y moderna. La aplicación incluye funcionalidades completas para agregar, editar, eliminar, buscar y ver detalles de contactos, además de opciones para llamar o enviar mensajes directamente.
 
-Tecnologías utilizadas
+🚀 Características principales
+📞 Gestión completa de contactos: CRUD (Crear, Leer, Actualizar, Eliminar)
+
+🔍 Búsqueda inteligente: Filtra contactos por nombre en tiempo real
+
+📱 Acciones directas: Llamar o enviar mensajes con un solo toque
+
+🎨 Interfaz moderna: Diseño con Material Components y animaciones fluidas
+
+🔄 Arquitectura robusta: Patrón MVVM con Room Database y LiveData
+
+🌙 Modo oscuro: Soporte completo para temas claros y oscuros
+
+🛡️ Validación de datos: Comprobación de formatos al agregar contactos
+
+🧰 Tecnologías utilizadas
 Lenguaje: Java
+
+Base de datos: Room Persistence Library
 
 Arquitectura: MVVM (Model-View-ViewModel)
 
-Base de datos local: Room (con LiveData)
+Componentes de Android:
 
-Navegación: Navigation Component
+Navigation Component
 
-Interfaz gráfica: Fragments, ViewBinding, RecyclerView, Material Components
+ViewBinding
 
-Imagen de contactos: Glide
+RecyclerView
 
-Persistencia y gestión de datos: ViewModel + Repository + DAO
+LiveData
 
-Compatibilidad mínima: Android API 24+
+ViewModel
 
-Gradle con Kotlin DSL
+Dependencias principales:
 
-Testing: JUnit y Espresso
+Glide (para manejo de imágenes)
+
+Material Components
+
+📁 Estructura del proyecto
+text
+ibrahaik-app_contactos_androidstudio/
+├── app/
+│   ├── src/main/
+│   │   ├── java/com/example/contactosapp/
+│   │   │   ├── data/          # Capa de datos (Room, DAO)
+│   │   │   ├── model/         # Entidades
+│   │   │   ├── repository/    # Repositorio
+│   │   │   ├── ui/            # Fragmentos y adaptadores
+│   │   │   ├── viewmodel/     # ViewModels
+│   │   │   └── MainActivity.java
+│   │   └── res/               # Recursos (layouts, drawables, etc.)
+│   └── build.gradle.kts       # Configuración de módulo
+├── build.gradle.kts           # Configuración global
+└── gradle/                    # Configuración de Gradle
+🔧 Requisitos e instalación
+Requisitos mínimos:
+
+Android API 24+ (Nougat 7.0)
+
+Android Studio Giraffe o superior
+
+Pasos para ejecutar:
+
+Clonar el repositorio:
+
+bash
+git clone https://github.com/ibrahaik/ibrahaik-app_contactos_androidstudio.git
+Abrir el proyecto en Android Studio
+
+Sincronizar proyectos con archivos Gradle
+
+Ejecutar en emulador o dispositivo físico
+
+🎨 Interfaz de usuario
+Pantalla principal: Listado de contactos con barra de búsqueda
+
+Detalle de contacto: Muestra información completa con acciones rápidas
+
+Formulario de contacto: Validación integrada para nombre y número
+
+Navegación: BottomNavigationView para cambiar entre secciones
+
+Animaciones: Transiciones fluidas entre pantallas
+
+📊 Base de datos
+Entidad principal: Contacto (nombre, número, imagen)
+
+Operaciones soportadas:
+
+Insertar nuevos contactos
+
+Actualizar contactos existentes
+
+Eliminar contactos (con opción de deshacer)
+
+Consultar todos los contactos
+
+Buscar contactos por nombre
+
+Obtener contacto por ID
+
+✨ Futuras mejoras
+Sincronización con contactos del sistema
+
+Importar/exportar contactos (vCard)
+
+Soporte para múltiples números por contacto
+
+Integración con redes sociales
+
+Ibrahim Haik*
+🔗 [LinkedIn](https://es.linkedin.com/in/ibrahim-haik-a12654226) / [GitHub](https://github.com/ibrahaik)
